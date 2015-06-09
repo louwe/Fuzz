@@ -27,6 +27,9 @@
 @implementation SimpleJsonObjectContainer
 
 - (id)initWithJSON:(NSData *)jsonData {
+    // Build objects from JSON.
+    // textList and imageList doesn't really hold real objects.
+    // Instead, they just reference the objects in dataObjects array.
     if(self = [super init]) {
         NSError* error;
         NSArray* deserializedData = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
@@ -81,12 +84,17 @@
 }
 
 -(void)processDataObjects:(NSArray*) deserializedData {
+    // Store the json objects in their respective lists according to their types.
     for(NSDictionary* item in deserializedData) {
         NSString* typeString = item[TYPE_KEY];
         SimpleJsonObject* jsonData = [[SimpleJsonObject alloc] init];
+        
+        // Set common attributes.
         jsonData.identification = item[ID_KEY];
         jsonData.date = item[DATE_KEY];
         jsonData.data = item[DATA_KEY];
+        
+        // Mark their types and add to the list.
         if([typeString isEqualToString:TEXT_TYPE]) {
             jsonData.type = SimpleTypeText;
             [self.textList addObject:@(self.dataObjects.count)];

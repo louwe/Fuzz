@@ -29,6 +29,7 @@
 #pragma mark - Navigation
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    // Tell the next controller the type of information to display.
     FirstViewController* destinationVC = (FirstViewController*)viewController;
     destinationVC.controllerType = self.selectedIndex;
 }

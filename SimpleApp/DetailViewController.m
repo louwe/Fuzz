@@ -29,6 +29,7 @@
         dispatch_async(queue, ^{
             imageToLoad = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.url]];
             [blockSelf.detailImageView performSelectorOnMainThread:@selector(setImage:) withObject:imageToLoad waitUntilDone:YES];
+            imageToLoad = nil;
             blockSelf = nil;
         });
         self.detailWebView.hidden = YES;
@@ -44,6 +45,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [self.detailWebView removeFromSuperview];
+    [self.detailImageView removeFromSuperview];
+    self.url = nil;
 }
 
 - (IBAction)backButtonDidPush:(UIButton *)sender {

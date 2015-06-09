@@ -19,6 +19,8 @@
 
 @implementation FirstViewController
 
+// This function queries the data store for the object we need to display at the specified index path.
+// The object returned will depend on the current mode of the table display.
 - (SimpleJsonObject*)itemAtIndex:(NSIndexPath*) indexPath {
     SimpleJsonObject* retVal = nil;
     if(self.controllerType == TableTypeText) {
@@ -33,12 +35,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Grab json data.
+    
+    // Initialize button titles.
     self.controllerType = TableTypeAll;
+    [(UIViewController*) (self.tabBarController.viewControllers[0]) setTitle:@"All"];
+    [(UIViewController*) (self.tabBarController.viewControllers[1]) setTitle:@"Text"];
+    [(UIViewController*) (self.tabBarController.viewControllers[2]) setTitle:@"Image"];
     NSURLSession* sharedSession = [NSURLSession sharedSession];
     NSURLRequest* urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://quizzes.fuzzstaging.com/quizzes/mobile/1/data.json"]];
     
-    // Parse to container and reload table data.
+    // Parse to container and reload table data when finished.
     FirstViewController* __block blockSelf = self;
     NSURLSessionDataTask* task = [sharedSession dataTaskWithRequest:urlRequest completionHandler:^(NSData* data, NSURLResponse* response, NSError* error) {
         blockSelf.objectContainer = [[SimpleJsonObjectContainer alloc] initWithJSON:data];
@@ -46,12 +52,15 @@
         blockSelf = nil;
     }];
     
+    // Fetch the JSON object.
     [task resume];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [self.tableView removeFromSuperview];
+    self.objectContainer = nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -73,7 +82,7 @@
     } else {
         [itemText appendString:@"Other: "];
     }
-    [itemText appendString:item.identification];
+    [itemText appendFormat:@"%@ Date: %@ Data: %@", item.identification, item.date, item.data];
     retVal.textLabel.text = itemText;
     
     return retVal;
