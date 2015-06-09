@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SimpleJsonObject.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (assign, nonatomic) TableTypes controllerType;
 
 @end
 

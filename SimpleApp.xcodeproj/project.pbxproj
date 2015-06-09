@@ -10,11 +10,13 @@
 		D10AAAE71B2661C8001FDA6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D10AAAE61B2661C8001FDA6D /* main.m */; };
 		D10AAAEA1B2661C8001FDA6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D10AAAE91B2661C8001FDA6D /* AppDelegate.m */; };
 		D10AAAED1B2661C8001FDA6D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10AAAEC1B2661C8001FDA6D /* FirstViewController.m */; };
-		D10AAAF01B2661C8001FDA6D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10AAAEF1B2661C8001FDA6D /* SecondViewController.m */; };
 		D10AAAF31B2661C8001FDA6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10AAAF11B2661C8001FDA6D /* Main.storyboard */; };
 		D10AAAF51B2661C8001FDA6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10AAAF41B2661C8001FDA6D /* Images.xcassets */; };
 		D10AAAF81B2661C8001FDA6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D10AAAF61B2661C8001FDA6D /* LaunchScreen.xib */; };
 		D10AAB041B2661C8001FDA6D /* SimpleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D10AAB031B2661C8001FDA6D /* SimpleAppTests.m */; };
+		D10AAB0F1B26672E001FDA6D /* SimpleJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D10AAB0E1B26672E001FDA6D /* SimpleJsonObject.m */; };
+		D10AAB121B26B069001FDA6D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10AAB111B26B069001FDA6D /* RootViewController.m */; };
+		D121514E1B26CFD200E94DEF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D121514D1B26CFD200E94DEF /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,14 +37,18 @@
 		D10AAAE91B2661C8001FDA6D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D10AAAEB1B2661C8001FDA6D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		D10AAAEC1B2661C8001FDA6D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		D10AAAEE1B2661C8001FDA6D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		D10AAAEF1B2661C8001FDA6D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		D10AAAF21B2661C8001FDA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D10AAAF41B2661C8001FDA6D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D10AAAF71B2661C8001FDA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D10AAAFD1B2661C8001FDA6D /* SimpleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10AAB021B2661C8001FDA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D10AAB031B2661C8001FDA6D /* SimpleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAppTests.m; sourceTree = "<group>"; };
+		D10AAB0D1B26672E001FDA6D /* SimpleJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleJsonObject.h; sourceTree = "<group>"; };
+		D10AAB0E1B26672E001FDA6D /* SimpleJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleJsonObject.m; sourceTree = "<group>"; };
+		D10AAB101B26B069001FDA6D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D10AAB111B26B069001FDA6D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D121514C1B26CFD200E94DEF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D121514D1B26CFD200E94DEF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +94,16 @@
 				D10AAAE91B2661C8001FDA6D /* AppDelegate.m */,
 				D10AAAEB1B2661C8001FDA6D /* FirstViewController.h */,
 				D10AAAEC1B2661C8001FDA6D /* FirstViewController.m */,
-				D10AAAEE1B2661C8001FDA6D /* SecondViewController.h */,
-				D10AAAEF1B2661C8001FDA6D /* SecondViewController.m */,
 				D10AAAF11B2661C8001FDA6D /* Main.storyboard */,
 				D10AAAF41B2661C8001FDA6D /* Images.xcassets */,
 				D10AAAF61B2661C8001FDA6D /* LaunchScreen.xib */,
 				D10AAAE41B2661C8001FDA6D /* Supporting Files */,
+				D10AAB0D1B26672E001FDA6D /* SimpleJsonObject.h */,
+				D10AAB0E1B26672E001FDA6D /* SimpleJsonObject.m */,
+				D10AAB101B26B069001FDA6D /* RootViewController.h */,
+				D10AAB111B26B069001FDA6D /* RootViewController.m */,
+				D121514C1B26CFD200E94DEF /* DetailViewController.h */,
+				D121514D1B26CFD200E94DEF /* DetailViewController.m */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -224,10 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D10AAAF01B2661C8001FDA6D /* SecondViewController.m in Sources */,
+				D10AAB0F1B26672E001FDA6D /* SimpleJsonObject.m in Sources */,
 				D10AAAEA1B2661C8001FDA6D /* AppDelegate.m in Sources */,
 				D10AAAED1B2661C8001FDA6D /* FirstViewController.m in Sources */,
 				D10AAAE71B2661C8001FDA6D /* main.m in Sources */,
+				D10AAB121B26B069001FDA6D /* RootViewController.m in Sources */,
+				D121514E1B26CFD200E94DEF /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +434,7 @@
 				D10AAB091B2661C8001FDA6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D10AAB0A1B2661C8001FDA6D /* Build configuration list for PBXNativeTarget "SimpleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +443,7 @@
 				D10AAB0C1B2661C8001FDA6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
